@@ -82,8 +82,8 @@ em,h3{
 }
 .avatar-wrap .avatar{
 	display: block;
-  width: 1.18rem;
-  height: 1.18rem;
+  width: 1.38rem;
+  height: 1.38rem;
 	margin: 0 auto;
 	border: 1px solid  #fff;
 	background-color: #eee;
@@ -127,25 +127,33 @@ em,h3{
 .show-wrap{
   margin: .3rem 0 0;
   background-color: #fff;
-  padding: .3rem .25rem 0;
+  padding: .3rem .15rem 0;
 }
 h3.title{
   font-size: 20px;
+  padding-left: .15rem;
   padding-bottom: .3rem;
 }
-.show{
-  display: -webkit-box; 
-	display: -webkit-flex;
-	display: flex;
-  flex-wrap: wrap;
-  justify-content:space-between;
+h3.title span{
+  color: #aaa;
+  font-size: 12px;
+  padding-left: 10px;
+}
+.show:after{
+  clear: both;
+  display: table;
+  height: 0;
+  content: "";
+  line-height: 0;
 }
 .show a{
-  flex:0 0 25%;
-  max-width: 23%;
-  padding-bottom: .26rem;
+  float: left;
+  width: 25%;
+  padding: 0 .15rem .2rem;
   margin-bottom: .15rem;
   text-align: center;
+  -webkit-transition: all .3s ease;
+  transition: all .3s ease;
 }
 .show a img{
   display: block;
@@ -178,8 +186,7 @@ h3.title{
     width: auto;
   }
   .show a{ 
-    flex:0 0 50%;
-    max-width: 48%;
+    width: 50%;
   }
   .m-hide{
     display: none;
@@ -206,5 +213,12 @@ h3.title{
   }
 }
 
-
-
+/*-----------------------pc 大于820px and 小于1200px-----------------------*/
+@media (min-width: 820px) and (max-width: 1200px){
+  .container{
+    width: auto;
+  }
+  .show a{ 
+    width: 33.333%;
+  }
+}
